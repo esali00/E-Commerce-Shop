@@ -1,0 +1,19 @@
+<div class="all-products">
+    <h1>All Products</h1>
+    <form>
+      <mat-form-field>
+        <mat-label>Product</mat-label>
+        <input matInput placeholder="Search for product">
+      </mat-form-field>
+      <button mat-raised-button color="primary"><mat-icon>search</mat-icon></button>
+    </form>
+  </div>
+
+  <div class="products-container">
+    <div (click)="getDetails(product.id)" class="product" *ngFor="let product of products">
+      <b>{{ product.title }}</b>
+      <p>{{ product.category[0].toUpperCase() + product.category.slice(1, product.category.length) }}</p>
+      <img class="product-img" src="{{ product.image }}">
+      <p>Rating: {{ product.rating.rate }}, Count: {{ product.rating.count }}</p>
+    </div>
+  </div>

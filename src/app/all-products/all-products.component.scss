@@ -1,0 +1,30 @@
+
+.all-products {
+    padding: 16px 32px;
+}
+
+button {
+    margin-left: 16px;
+}
+
+.products-container {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: white;
+    border-radius: 16px;
+    width: 175px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.product:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1.05);
+}
+

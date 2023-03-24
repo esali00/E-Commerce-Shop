@@ -1,0 +1,29 @@
+.product-details-left {
+    height: 400px;
+}
+
+.product-details-right {
+    box-sizing: border-box;
+    height: 300px;
+    padding: 16px;
+}
+
+mat-grid-list {
+    padding: 0 !important;
+    height: calc(100vh - 64px);
+}
+
+mat-grid-tile {
+    padding: 0 !important;
+    height: calc(100vh - 64px);
+}
+
+.product-details-img {
+    width: 300px;
+    height: 300px;
+}
+
+.addToBasket-btn {
+    margin-top: 16px;
+    display: block;
+}

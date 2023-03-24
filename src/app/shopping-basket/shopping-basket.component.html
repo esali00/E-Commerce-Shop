@@ -1,0 +1,26 @@
+
+<div class="product-shopping-basket" *ngFor="let product of this.basket.shopping_cart; index as i">
+    <div>
+        <b>{{ product.title }}</b>
+        <p>{{ product.category[0].toUpperCase() + product.category.slice(1, product.category.length) }}</p>
+        <img class="product-img" src="{{ product.image }}">
+        <p>Rating: {{ product.rating.rate }}, Count: {{ product.rating.count }}</p>
+    </div>
+
+    <div>
+         <h2>Payment details</h2>
+         <p><b>Price: </b> <span>{{ product.price }}$</span></p>
+         <p><b>Amount: </b> <span>{{ this.basket.amount[i] }}</span></p>
+         <div class="amount-btn-container">
+            <button (click)="increaseAmount(i)" mat-mini-fab color="primary">
+                <mat-icon>exposure_plus_1</mat-icon>
+              </button>
+              <button (click)="decreaseAmount(i)" mat-mini-fab color="primary">
+                <mat-icon>exposure_minus_1</mat-icon>
+              </button>
+         </div>
+         <p><b>Total: </b> <span>{{ product.price * this.basket.amount[i] }}$</span></p>
+         <button class="buy-btn" mat-raised-button color="primary">Buy</button>
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Firstname</mat-label>
+          <input matInput placeholder="First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Lastname</mat-label>
+            <input matInput placeholder="Last name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your email and password</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="E-mail"
+                 required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="password"
+                   required>
+          </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>After you have confirmed your registration, you will be redirected to the login area.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <a routerLink="/login"><button mat-button >Confirm</button></a>
+      </div>
+    </mat-step>
+  </mat-stepper>

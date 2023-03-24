@@ -1,0 +1,17 @@
+.product-shopping-basket {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.amount-btn-container {
+    margin-bottom: 12px;
+}
+
+.amount-btn-container button:first-of-type {
+    margin-right: 16px;
+}

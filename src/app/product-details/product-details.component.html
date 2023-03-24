@@ -1,0 +1,19 @@
+
+<mat-grid-list cols="2">
+      <mat-grid-tile>
+        <div *ngIf="product" class="product-details-left">
+              <b>{{ product.title }}</b>
+              <p>{{ product.category[0].toUpperCase() + product.category.slice(1, product.category.length) }}</p>
+              <img class="product-details-img" src="{{ product.image }}">
+              <p>Rating: {{ product.rating.rate }}, Count: {{ product.rating.count }}</p>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div *ngIf="product" class="product-details-right">
+            <h2>Description</h2>
+            <p>{{ product.description }}</p>
+            <b>Price: </b> <span>{{ product.price }}$</span>
+            <button (click)="this.basket.addToBasket(product.id)" class="addToBasket-btn" mat-raised-button color="primary">Add to Shopping basket</button>
+        </div>
+      </mat-grid-tile>
+  </mat-grid-list>
